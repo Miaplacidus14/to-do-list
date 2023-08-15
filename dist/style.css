@@ -1,0 +1,232 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 10fr;
+}
+
+header {
+    display: flex;
+    background-color: #131313;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+header > h1 {
+    margin-left: 1.5em;
+}
+
+.account {
+    display: flex;
+    margin-right: 1.5em;
+}
+
+.account > img {
+    width: 40px;
+    height: auto;
+    margin-right: 1em;
+}
+
+header > h1:hover, .account > h1:hover {
+    color: #FF6B00;
+    cursor: pointer;
+}
+
+.sidebar { 
+    display: flex;
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: #EFEFEF;
+}
+
+.sidebar > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    gap: 1em;
+}
+
+.sidebar > ul > li {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.sidebar > ul > li:hover {
+    color: #FF6B00;
+}
+
+.sidebar > ul > li > img {
+    width: 30px;
+    height: auto;
+    margin-right: 0.5em;
+}
+
+.content {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content > button {
+    width: 80%;
+    margin-top: 3em;
+    height: 2em;
+    border: none;
+    background-color: #131313;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.tasks-storage {
+    display: flex;
+    flex-direction: column;
+    background-color: #EFEFEF;
+    width: 80%;
+    margin-top: 3em;
+    border-radius: 5px;
+    align-items: center;
+    padding: 2em;
+    gap: 1em;
+}
+
+form, .notes-storage {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+
+.formulaire, .notes-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 25em;
+    background-color: #EFEFEF;
+    border-radius: 10px;
+}
+
+.formulaire > button {
+    margin-top: 1em;
+    width: 90%;
+    height: 2em;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    color: #131313;
+    margin-left: 2em;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    left: 73%;
+    cursor: pointer;
+}
+
+.form {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-notes {
+    margin-left: 2em;
+}
+.text-input {
+    height: 2em;
+    width: 90%;
+    border: none;
+    border-radius: 20px;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
+.form-importance {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2em;
+}
+
+.button-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+.button-container > button {
+    border: 1px solid black;
+    width: 10em;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.low:focus {
+    background-color: yellow;
+    color: white;
+}
+
+.normal:focus {
+    background-color: orange;
+    color: white;
+}
+
+.high:focus {
+    background-color: red;
+    color: white;
+}
+
+.form-notes > textarea {
+    width: 90%;
+    resize: none;
+}
+
+.form-notes > textarea:focus {
+    outline: none;
+}
+
+.task {
+    width: 90%;
+    display: flex;
+    height: 2em;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    color: black;
+}
+
+.task > h1 {
+    margin-left: 0.5em;
+    cursor: pointer;
+}
+
+.task > h1:hover {
+    color: #FF6B00;
+}
+
+.task > img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.notes-content > h1, .notes-content > p {
+    margin-left: 2em;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="../src/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Todo List</h1>
+        <div class="account">
+            <img src="../src/images/card-account-details-outline.svg">
+            <h1>Mon compte</h1>
+        </div>
+    </header>
+    <div class="sidebar">
+        <ul class="project-list">
+            <li onclick="projectAffichage(this.id)" id="main"><img src="../src/images/star.svg">Main</li>
+        </ul>
+    </div>
+    <div class="content">
+        <button onclick="addForm()">+ Ajouter une nouvelle tâche</button>
+        <div class="tasks-storage">
+        </div>
+    </div>
+    <form method="post" class="new-task">
+        <div class="formulaire">
+            <img src="../src/images/close.svg" class="close" onclick="document.querySelector('.new-task').style.visibility = 'hidden';">
+            <div class="form">
+                <p>Title :</p>
+                <input type="text" name="title" class="text-input">
+            </div>
+            <div class="form">
+                <p>Date d'échéance</p>
+                <input type="text" name="date" class="text-input">
+            </div>
+            <div class="form-importance">
+                <p>Priorité :</p>
+                <div class="button-container">
+                    <input type="radio" class="low" name="priority">
+                    <p>Basse</p>
+                    <input type="radio" class="normal" name="priority">
+                    <p>Normal</p>
+                    <input type="radio"class="high" name="priority">
+                    <p>Importante</p>
+                </div>
+            </div>
+            <div class="form-notes">
+                <p>Notes :</p>
+                <textarea name="notes" id="notes"></textarea>
+            </div>
+            <button class="button-submit" type="submit" id="main">Envoyer</button>
+        </div>
+    </form>
+</body>
+</html>
